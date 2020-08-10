@@ -53,8 +53,10 @@ This is a bunch of code that is me trying to learn the ins and outs of coding. S
 * Make sure to download each of your imports that aren't in the default library for python
 
 **Running with Docker 24/7**
-To run you can use to following command
+
 ```bash
+# To run you can use to following command
+
 $ docker pull 10.10.10.1:5000/algo-name \
 && docker run -d \
   --name algo_name \
@@ -65,8 +67,9 @@ $ docker pull 10.10.10.1:5000/algo-name \
   10.10.10.1:5000/algo-name
 ```
 **Build and push image**
-To build and push use these commands (portainer)
 ```bash
+# To build and push you can use these commands (for portainer)
+
 $ docker build --no-cache -t 10.10.10.1:5000/algo-name .
 $ docker push 10.10.10.1:5000/algo-name
 ```
@@ -127,8 +130,10 @@ $ docker push 10.10.10.1:5000/algo-name
   * Within redis-cli// > config set requirepass yourPasswordHere (recommended at least 32 characters long)
 
 **Running**
-To run redis-shortable use the following docker command:
+
 ```bash
+# To run redis-shortable use the following docker command
+
 docker pull 10.10.10.1:5000/algo-name \
 && docker run -d \
   --name algo_name \
