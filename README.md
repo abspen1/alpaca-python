@@ -42,7 +42,7 @@ This is a bunch of code that is me trying to learn the ins and outs of coding. S
 
 ## python
 **algo.py**
-* This is a simple algorithm that incorporates daily rebalancing to limit volatility and increase returns using leveraged ETF's
+* This is a simple algorithm that incorporates daily rebalancing to limit volatility and increase returns 
     * Set up so you can edit your holdings and weights however you like
 * Includes the schedule module which works brilliantly
 * Allows for the algorithm to be ran 24/7 and only do things when you want to
@@ -83,7 +83,7 @@ $ docker push 10.10.10.1:5000/algo-name
 * The script will output some logs as well as your positions open and the orders placed
 
 **algo.js**
-* This is a simple algorithm that incorporates daily rebalancing to limit volatility and increase returns using leveraged ETF's
+* This is a simple algorithm that incorporates daily rebalancing to limit volatility and increase returns 
     * Set up so you can edit your holdings and weights however you like
 * Environment Variable Setup
     * Create a .env file with your api credentials
@@ -97,7 +97,7 @@ $ docker push 10.10.10.1:5000/algo-name
 
 ## go
 **algo.go**
-* This is a simple algorithm that incorporates daily rebalancing to limit volatility and increase returns using leveraged ETF's
+* This is a simple algorithm that incorporates daily rebalancing to limit volatility and increase returns 
     * Set up so you can edit your holdings and weights however you like
 * Environment Variable Setup
     * There are several ways to set and get environment variables with Go
