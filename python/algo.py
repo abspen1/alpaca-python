@@ -15,7 +15,6 @@ Property of Tendie Town LLC. All rights reserved.
 import alpaca_trade_api as tradeapi
 import json
 import os
-import redis
 import requests
 import schedule
 import time
