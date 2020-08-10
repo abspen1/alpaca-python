@@ -91,7 +91,7 @@ $ docker push 10.10.10.1:5000/algo-name
         * APCA_API_SECRET_KEY=secretKey
         * APCA_API_BASE_URL=https://paper-api.alpaca.markets
     * Create a package.json file
-        * 'npm init -y' in your terminal will do this for you
+        * 'npm init -y' in your terminal will do this for you, be sure to cd to the same directory as your .env file
     * Install the dotenv npm package
         * npm install dotenv
 
