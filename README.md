@@ -130,7 +130,6 @@ $ docker push 10.10.10.1:5000/algo-name
   * Within redis-cli// > config set requirepass yourPasswordHere (recommended at least 32 characters long)
 
 **Running**
-
 ```bash
 # To run redis-shortable use the following docker command
 
@@ -142,6 +141,14 @@ docker pull 10.10.10.1:5000/algo-name \
   -e APCA_API_SECRET_KEY="some secret KEY" \
   -e APCA_API_BASE_URL="https://api.alpaca.markets or https://paper-api.alpaca.markets" \
   10.10.10.1:5000/algo-name
+```
+
+**Build and push image**
+```bash
+# To build and push you can use these commands (for portainer)
+
+$ docker build --no-cache -t 10.10.10.1:5000/algo-name .
+$ docker push 10.10.10.1:5000/algo-name
 ```
 
 ## Some to-do's with my scripts here
