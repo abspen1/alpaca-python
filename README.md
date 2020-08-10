@@ -40,20 +40,44 @@ This is a bunch of code that is me trying to learn the ins and outs of coding. S
 * However, I would recommend using the 'redis-shortable' script over this one
     * redis-shortable will not use other files and instead use the Redis database for quick speeds and less storage needed
 
+## python
+**algo.py**
+* This is a simple algorithm that incorporates daily rebalancing to limit volatility and increase returns using leveraged ETF's
+    * Set up so you can edit your holdings and weights however you like
+* Includes the schedule module which works brilliantly
+* Allows for the algorithm to be ran 24/7 and only do things when you want to
+* There is a Dockerfile in this directory that can help with running 24/7
 
+**Dockerfile**
+* Built using conda but you could just as easily use a different python as long as it's python3
+* Make sure to download each of your imports that aren't in the default library for python
+
+**Running with Docker 24/7**
+To run you can use to following command
+```bash
+$ docker pull 10.10.10.1:5000/algo-name \
+&& docker run -d \
+  --name algo_name \
+  --restart unless-stopped \
+  -e APCA_API_KEY_ID="some key ID" \
+  -e APCA_API_SECRET_KEY="some secret KEY" \
+  -e APCA_API_BASE_URL="https://api.alpaca.markets or https://paper-api.alpaca.markets" \
+  10.10.10.1:5000/algo-name
+```
+**Build and push image**
+To build and push use these commands (portainer)
+```bash
+$ docker build --no-cache -t 10.10.10.1:5000/algo-name .
+$ docker push 10.10.10.1:5000/algo-name
+```
 ## js
 **Falcon-Broswer**
-* First Need to download the folder from my github.. 
+* First need to download the folder from my github.. 
 * Run the HTML file within a browser, I use Chrome. 
 * Plug in your Alpaca Key ID and your Alpaca Secret Key ID
 * Click on run and it will instantly run Falcon One Algorithm within your account
     * Must be a paper account unless you tweak some code.
 * The script will output some logs as well as your positions open and the orders placed
-
-**long-short-browser**
-* This is an example I used from the alpaca JS github
-* I used this example to help me with the Falcon-Browser 
-* I need to take a longer class on HTML and CSS as I'm still uncomfortable using
 
 **algo.js**
 * This is a simple algorithm that incorporates daily rebalancing to limit volatility and increase returns using leveraged ETF's
@@ -123,5 +147,4 @@ docker pull 10.10.10.1:5000/algo-name \
 **go**
 * Try to get a web browser trader with the Go program as backend
 **python**
-* Add a python folder with the simple rebalance python program and Dockerfile to run it
 * Try to get a web browser trader with Python as backend
