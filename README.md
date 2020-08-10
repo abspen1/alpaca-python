@@ -113,6 +113,7 @@ $ docker push 10.10.10.1:5000/algo-name
     * $ go get github.com/shopspring/decimal
 
 ## redis-shortable
+**main.py**
 * This script uses Redis database to keep track of how frequently specific Assets are actually shortable
 * Good to know if you're wanting to short Assets that frequently fluctuate from hard-to-borrow or to un-shortable
 * I created this script to keep track of how frequently Volatility ETF's are shortable
