@@ -66,7 +66,7 @@ func main() {
 			alpacaClient.stock = "QQQ" // NASDAQ ETF
 			alpacaClient.weight = 0.20
 		case 4:
-			alpacaClient.stock = "DOW" // DOW ETF
+			alpacaClient.stock = "DIA" // DOW ETF
 			alpacaClient.weight = 0.20
 		default:
 			alpacaClient.stock = "SPY" // S&P 500 ETF

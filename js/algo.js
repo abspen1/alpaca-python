@@ -20,7 +20,7 @@ class FalconOne {
         this.weight2 = 0.10;
         this.stock3 = "QQQ"; // NASDAQ ETF
         this.weight3 = 0.25;
-        this.stock4 = "DOW"; // DOW INDUSTRIAL ETF
+        this.stock4 = "DIA"; // DOW INDUSTRIAL ETF
         this.weight4 = 0.1;
         this.stock5 = "SPY"; // S&P 500 ETF
         this.weight5 = 0.25;
