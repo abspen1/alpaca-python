@@ -2,31 +2,34 @@
 
 This is a bunch of code that is me trying to learn the ins and outs of coding in Python. Specifically with API, CSV/TXT files, Redis Database and Pylivetrader. There is a little bit of me trying to migrate these algorithms into other programming languages as well. So far just Golang and JavaScript. The algorithms I have coded so far are simple rebalance algorithms.
 
-## 📁 Main
-**algo-data**
+## 📁 alpaca
+```
+Alpaca is an awesome trading platform for algorithmic trading. They have outstanding docs and an easy-to-work-with API. Here are some links to [creating and account](https://app.alpaca.markets/login) and the [API docs](https://alpaca.markets/docs/)
+```
+# algo-data
 * This script will give you some account information and data
 * You need to instantiate some environment variables first
     * You can do this with export ENV_VAR="value"
     * Need your API Key, API Secret Key and API Base URL
 * Run the script and get some insight into your account's performance
 
-**get-acct-pct**
+# get-acct-pct
 * This is a possible addition to our WebApp
 * This script is set up to be able to take in your API credentials as environment variables
 * Then will find your true base value
 * With that base value will calculate your total P/L of your account
 
-**json-funct**
+# json-funct
 * This is a script of several functions that will return json type
 * Very useful if you are wanting to build your own algorithm within Alpaca
 * There are many other functions that could be added to this script by reading the Alpaca Docs
 
-**main**
+# main
 * This is the original script that now just has leftover scraps that I didn't pull into a seperate script yet
 * Still has some interesting things within but does need a clean-up
 * Something specific that is cool in here is how to work with the Clock and whether the market is open/closed
 
-**shortable-txt**
+# shortable-txt
 * This script will read/write to and from txt files
 * Checks whether a specific list of Assets is shortable and will do things accordingly
 * Pretty great option for keeping track of when Assets are hard-to-borrow or not shortable
@@ -34,19 +37,18 @@ This is a bunch of code that is me trying to learn the ins and outs of coding in
     * redis-shortable will not use other files and instead use the Redis database for quick speeds and less storage needed
 
 ## 📁 python
-**algo.py**
+# algo.py
 * This is a simple algorithm that incorporates daily rebalancing to limit volatility and increase returns 
     * Set up so you can edit your holdings and weights however you like
 * Includes the schedule module which works brilliantly
 * Allows for the algorithm to be ran 24/7 and only do things when you want to
 * There is a Dockerfile in this directory that can help with running 24/7
 
-**Dockerfile**
+# Dockerfile
 * Built using conda but you could just as easily use a different python as long as it's python3
 * Make sure to download each of your imports that aren't in the default library for python
 
-**Running with Docker 24/7**
-
+# Running with Docker 24/7
 ```bash
 # To run you can use to following command
 
@@ -59,7 +61,7 @@ $ docker pull 10.10.10.1:5000/algo-name \
   -e APCA_API_BASE_URL="https://api.alpaca.markets or https://paper-api.alpaca.markets" \
   10.10.10.1:5000/algo-name
 ```
-**Build and push image**
+# Build & Push Images
 ```bash
 # To build and push you can use these commands (for portainer)
 
@@ -67,7 +69,7 @@ $ docker build --no-cache -t 10.10.10.1:5000/algo-name .
 $ docker push 10.10.10.1:5000/algo-name
 ```
 ## 📁 js
-**Falcon-Broswer**
+# Falcon-Browser
 * First need to download the folder from my github.. 
 * Run the HTML file within a browser, I use Chrome. 
 * Plug in your Alpaca Key ID and your Alpaca Secret Key ID
@@ -75,7 +77,7 @@ $ docker push 10.10.10.1:5000/algo-name
     * Must be a paper account unless you tweak some code.
 * The script will output some logs as well as your positions open and the orders placed
 
-**algo.js**
+# algo.js
 * This is a simple algorithm that incorporates daily rebalancing to limit volatility and increase returns 
     * Set up so you can edit your holdings and weights however you like
 * Environment Variable Setup
@@ -89,7 +91,7 @@ $ docker push 10.10.10.1:5000/algo-name
         * npm install dotenv
 
 ## 📁 go
-**algo.go**
+# algo.go
 * This is a simple algorithm that incorporates daily rebalancing to limit volatility and increase returns 
     * Set up so you can edit your holdings and weights however you like
 * Environment Variable Setup
@@ -111,7 +113,7 @@ $ docker push 10.10.10.1:5000/algo-name
 ```
 This is a very limited example of the possible uses of Redis Database. There are several different clients for most languages. I have 2 Golang client examples. I prefer redigo over redis-go since it has a similar simplistic feel to the redis in python.
 ```
-# Go
+# Go 📁
 **redigo**
 * [Install Directions](https://github.com/gomodule/redigo#installation)
 * [Go Connection Examples](https://docs.objectrocket.com/redis_go_examples.html)
