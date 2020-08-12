@@ -1,21 +1,14 @@
 # Trading-Algorithms
 
-This is a bunch of code that is me trying to learn the ins and outs of coding. Specifically with API, CSV/TXT files, Redis Database and Pylivetrader. There is a little bit of me trying to migrate these algorithms into other programming languages as well. So far just Golang and JavaScript. The algorithms I have coded so far are simple rebalance algorithms.
+This is a bunch of code that is me trying to learn the ins and outs of coding in Python. Specifically with API, CSV/TXT files, Redis Database and Pylivetrader. There is a little bit of me trying to migrate these algorithms into other programming languages as well. So far just Golang and JavaScript. The algorithms I have coded so far are simple rebalance algorithms.
 
-## Main
+## 📁 Main
 **algo-data**
 * This script will give you some account information and data
 * You need to instantiate some environment variables first
     * You can do this with export ENV_VAR="value"
     * Need your API Key, API Secret Key and API Base URL
 * Run the script and get some insight into your account's performance
-
-**demo-redis**
-* This is bunch of commented out code that I've used when hard coding some variables into Redis and just learning how to use Redis
-* There's example for how to do many things in Redis with Python in this script
-* Uncomment out items to see how they would work within your Redis Server
-    * See below for how to set up your own Redis Server
-* Need the Redis password passed as an environment variable
 
 **get-acct-pct**
 * This is a possible addition to our WebApp
@@ -40,7 +33,7 @@ This is a bunch of code that is me trying to learn the ins and outs of coding. S
 * However, I would recommend using the 'redis-shortable' script over this one
     * redis-shortable will not use other files and instead use the Redis database for quick speeds and less storage needed
 
-## python
+## 📁 python
 **algo.py**
 * This is a simple algorithm that incorporates daily rebalancing to limit volatility and increase returns 
     * Set up so you can edit your holdings and weights however you like
@@ -73,7 +66,7 @@ $ docker pull 10.10.10.1:5000/algo-name \
 $ docker build --no-cache -t 10.10.10.1:5000/algo-name .
 $ docker push 10.10.10.1:5000/algo-name
 ```
-## js
+## 📁 js
 **Falcon-Broswer**
 * First need to download the folder from my github.. 
 * Run the HTML file within a browser, I use Chrome. 
@@ -95,7 +88,7 @@ $ docker push 10.10.10.1:5000/algo-name
     * Install the dotenv npm package
         * npm install dotenv
 
-## go
+## 📁 go
 **algo.go**
 * This is a simple algorithm that incorporates daily rebalancing to limit volatility and increase returns 
     * Set up so you can edit your holdings and weights however you like
@@ -112,7 +105,27 @@ $ docker push 10.10.10.1:5000/algo-name
 * Download Decimal Package
     * $ go get github.com/shopspring/decimal
 
-## redis-shortable
+
+## 📁 demo-redis
+# This is a very limited example of the possible uses of Redis Database
+```
+Redis is a fast, large database that is easy to use. I love implementing Redis in my coding projects
+```
+**.go**
+* [Install Directions](https://github.com/go-redis/redis#installation)
+* [GoDocs](https://pkg.go.dev/github.com/go-redis/redis/v8?tab=doc#pkg-examples)
+
+**.js**
+* [Install Directions](https://github.com/luin/ioredis#install)
+* [Other Examples](https://github.com/luin/ioredis/tree/master/examples)
+
+**.py**
+* Check my other repo [twitter-bot](https://github.com/abspen1/twitter-bot#prerequisites) for redis install directions
+* I also implement redis in several ways in that repo so a great resource for more examples
+* In my [Fantasy-Twitter](https://github.com/abspen1/Fantasy-Twitter/blob/master/main.py) script I also use Redis.
+* In my opinion, Redis is the easiest to manipulate in Python. Could be biased since I've used Redis with Python the most out of the three
+
+## 📁 redis-shortable
 **main.py**
 * This script uses Redis database to keep track of how frequently specific Assets are actually shortable
 * Good to know if you're wanting to short Assets that frequently fluctuate from hard-to-borrow or to un-shortable
