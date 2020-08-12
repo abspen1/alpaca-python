@@ -107,30 +107,39 @@ $ docker push 10.10.10.1:5000/algo-name
 
 
 ## 📁 demo-redis
-# This is a very limited example of the possible uses of Redis Database
-
-**.go**
+[redis](https://redis.io/)
+```
+This is a very limited example of the possible uses of Redis Database. There are several different clients for most languages. I have 2 Golang client examples. I prefer redigo over redis-go since it has a similar simplistic feel to the redis in python.
+```
+# Go
+**redigo**
+* [Install Directions](https://github.com/gomodule/redigo#installation)
+* [Go Connection Examples](https://docs.objectrocket.com/redis_go_examples.html)
+**go-redis**
 * [Install Directions](https://github.com/go-redis/redis#installation)
 * [GoDocs](https://pkg.go.dev/github.com/go-redis/redis/v8?tab=doc#pkg-examples)
 
-**.js**
+
+# JavaScript
+**ioredis**
 * [Install Directions](https://github.com/luin/ioredis#install)
 * [Other Examples](https://github.com/luin/ioredis/tree/master/examples)
 
-**.py**
+# Python
+**redis**
 * Check my other repo [twitter-bot](https://github.com/abspen1/twitter-bot#prerequisites) for redis install directions
 * I also implement redis in several ways in that repo so a great resource for more examples
 * In my [Fantasy-Twitter](https://github.com/abspen1/Fantasy-Twitter/blob/master/main.py) script I also use Redis.
 * In my opinion, Redis is the easiest to manipulate in Python. Could be biased since I've used Redis with Python the most out of the three
 
 ## 📁 redis-shortable
-**main.py**
+# main.py
 * This script uses Redis database to keep track of how frequently specific Assets are actually shortable
 * Good to know if you're wanting to short Assets that frequently fluctuate from hard-to-borrow or to un-shortable
 * I created this script to keep track of how frequently Volatility ETF's are shortable
 * There is a Dockerfile as well that will allow you to run this script each morning automatically
 
-**Redis Setup**
+# Redis Setup
 * Download redis and activate your redis server, a simple youtube search will do
 * Start running your redis-server
 * Next open your redis-cli
@@ -141,7 +150,7 @@ $ docker push 10.10.10.1:5000/algo-name
 * Set your password
   * Within redis-cli// > config set requirepass yourPasswordHere (recommended at least 32 characters long)
 
-**Running**
+# Running
 ```bash
 # To run redis-shortable use the following docker command
 
