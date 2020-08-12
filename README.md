@@ -1,6 +1,6 @@
 # Trading-Algorithms
 
-This is a bunch of code that is me trying to learn the ins and outs of coding. Specifically with API, CSV/TXT files, Redis Database and Pylivetrader. There is a little bit of me trying to migrate these algorithms into other programming languages as well. So far just Golang and JavaScript. The algorithms I have coded so far are simple rebalance algorithms.
+This is a bunch of code that is me trying to learn the ins and outs of coding in Python. Specifically with API, CSV/TXT files, Redis Database and Pylivetrader. There is a little bit of me trying to migrate these algorithms into other programming languages as well. So far just Golang and JavaScript. The algorithms I have coded so far are simple rebalance algorithms.
 
 ## 📁 Main
 **algo-data**
@@ -107,8 +107,23 @@ $ docker push 10.10.10.1:5000/algo-name
 
 
 ## 📁 demo-redis
+# This is a very limited example of the possible uses of Redis Database
+```
+Redis is a fast, large database that is easy to use. I love implementing Redis in my coding projects
+```
 **.go**
-* [Install Directions](https://github.com/go-redis/redis)
+* [Install Directions](https://github.com/go-redis/redis#installation)
+* [GoDocs](https://pkg.go.dev/github.com/go-redis/redis/v8?tab=doc#pkg-examples)
+
+**.js**
+* [Install Directions](https://github.com/luin/ioredis#install)
+* [Other Examples](https://github.com/luin/ioredis/tree/master/examples)
+
+**.py**
+* Check my other repo [twitter-bot](https://github.com/abspen1/twitter-bot#prerequisites) for redis install directions
+* I also implement redis in several ways in that repo so a great resource for more examples
+* In my [Fantasy-Twitter](https://github.com/abspen1/Fantasy-Twitter/blob/master/main.py) script I also use Redis.
+* In my opinion, Redis is the easiest to manipulate in Python. Could be biased since I've used Redis with Python the most out of the three
 
 ## 📁 redis-shortable
 **main.py**
