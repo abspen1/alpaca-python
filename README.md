@@ -2,20 +2,13 @@
 
 This is a bunch of code that is me trying to learn the ins and outs of coding. Specifically with API, CSV/TXT files, Redis Database and Pylivetrader. There is a little bit of me trying to migrate these algorithms into other programming languages as well. So far just Golang and JavaScript. The algorithms I have coded so far are simple rebalance algorithms.
 
-## Main
+## 📁 Main
 **algo-data**
 * This script will give you some account information and data
 * You need to instantiate some environment variables first
     * You can do this with export ENV_VAR="value"
     * Need your API Key, API Secret Key and API Base URL
 * Run the script and get some insight into your account's performance
-
-**demo-redis**
-* This is bunch of commented out code that I've used when hard coding some variables into Redis and just learning how to use Redis
-* There's example for how to do many things in Redis with Python in this script
-* Uncomment out items to see how they would work within your Redis Server
-    * See below for how to set up your own Redis Server
-* Need the Redis password passed as an environment variable
 
 **get-acct-pct**
 * This is a possible addition to our WebApp
@@ -40,7 +33,7 @@ This is a bunch of code that is me trying to learn the ins and outs of coding. S
 * However, I would recommend using the 'redis-shortable' script over this one
     * redis-shortable will not use other files and instead use the Redis database for quick speeds and less storage needed
 
-## python
+## 📁 python
 **algo.py**
 * This is a simple algorithm that incorporates daily rebalancing to limit volatility and increase returns 
     * Set up so you can edit your holdings and weights however you like
@@ -73,7 +66,7 @@ $ docker pull 10.10.10.1:5000/algo-name \
 $ docker build --no-cache -t 10.10.10.1:5000/algo-name .
 $ docker push 10.10.10.1:5000/algo-name
 ```
-## js
+## 📁 js
 **Falcon-Broswer**
 * First need to download the folder from my github.. 
 * Run the HTML file within a browser, I use Chrome. 
@@ -95,7 +88,7 @@ $ docker push 10.10.10.1:5000/algo-name
     * Install the dotenv npm package
         * npm install dotenv
 
-## go
+## 📁 go
 **algo.go**
 * This is a simple algorithm that incorporates daily rebalancing to limit volatility and increase returns 
     * Set up so you can edit your holdings and weights however you like
@@ -112,7 +105,12 @@ $ docker push 10.10.10.1:5000/algo-name
 * Download Decimal Package
     * $ go get github.com/shopspring/decimal
 
-## redis-shortable
+
+## 📁 demo-redis
+**.go**
+* <span onclick="location=''" STYLE="text-decoration:underline">Installation Directions</span>
+
+## 📁 redis-shortable
 **main.py**
 * This script uses Redis database to keep track of how frequently specific Assets are actually shortable
 * Good to know if you're wanting to short Assets that frequently fluctuate from hard-to-borrow or to un-shortable
@@ -161,3 +159,8 @@ $ docker push 10.10.10.1:5000/algo-name
 * Try to get a web browser trader with the Go program as backend
 **python**
 * Try to get a web browser trader with Python as backend
+
+
+<!-- links below this -->
+
+[1]:
