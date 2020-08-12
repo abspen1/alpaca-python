@@ -108,7 +108,7 @@ $ docker push 10.10.10.1:5000/algo-name
 
 ## 📁 demo-redis
 **.go**
-* <span onclick="location=''" STYLE="text-decoration:underline">Installation Directions</span>
+* [Install Directions](https://github.com/go-redis/redis)
 
 ## 📁 redis-shortable
 **main.py**
