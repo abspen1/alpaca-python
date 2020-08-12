@@ -8,7 +8,7 @@ var client = new Redis({
     port: 6379,          // Redis port
     host: '10.10.10.1',   // Redis host
     password: redisPass,
-    db: 1,
+    db: 2,
 })
 
 
