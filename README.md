@@ -108,9 +108,7 @@ $ docker push 10.10.10.1:5000/algo-name
 
 ## 📁 demo-redis
 # This is a very limited example of the possible uses of Redis Database
-```
-Redis is a fast, large database that is easy to use. I love implementing Redis in my coding projects
-```
+
 **.go**
 * [Install Directions](https://github.com/go-redis/redis#installation)
 * [GoDocs](https://pkg.go.dev/github.com/go-redis/redis/v8?tab=doc#pkg-examples)
