@@ -112,21 +112,20 @@ func OtherExamples() {
 	}
 
 	// Intercept of the two sets
-	// var intersect []string
-	// val, err = client.SInter(ctx, intersect, "goList", "powerList").Result()
-	// if err != nil {
-	// 	panic(err)
-	// } else {
-	// 	fmt.Println("intersect", val)
-	// }
-	// client.sinter('jslist', 'powerlist').then((res) => console.log(res));
-	// client.sunion('jslist', 'powerslist').then((res) => console.log(res));
-	// client.scard('jslist').then((res) => console.log(res));
-	// client.scard('powerlist').then((res) => console.log(res));
+	results := client.SInter(ctx, "goList", "powerList")
+	fmt.Println(results)
+
+	results = client.SUnion(ctx, "goList", "powerList")
+	fmt.Println(results)
+
+	resul := client.SCard(ctx, "goList")
+	fmt.Println(resul)
+
+	resul = client.SCard(ctx, "powerList")
 
 	// Demo the hashes
 
-	err = client.HSet(ctx, "Hero", "Name", "Danny Ranger").Err()
+	err = client.HSet(ctx, "Hero", "Name", "Draw Ranger").Err()
 	if err != nil {
 		panic(err)
 	}
@@ -143,11 +142,8 @@ func OtherExamples() {
 
 	// client.hgetall('Hero').then((res) => console.log(res));
 
-	// val, err = client.HGetAll(ctx, "Hero").Result()
-	// if err != nil {
-	// 	panic(err)
-	// }
-	// fmt.Println("Hero", val)
+	hash := client.HGetAll(ctx, "Hero")
+	fmt.Println(hash)
 
 	// Hero = {
 	//     Name: 'Draw Ranger',
