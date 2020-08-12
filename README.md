@@ -174,8 +174,3 @@ $ docker push 10.10.10.1:5000/algo-name
 * Try to get a web browser trader with the Go program as backend
 **python**
 * Try to get a web browser trader with Python as backend
-
-
-<!-- links below this -->
-
-[1]:
