@@ -91,6 +91,11 @@ func main() {
 		fmt.Println("hash: ", strMap)
 	}
 
+	exists, _ = redis.Bool(client.Do("EXISTS", "Hero", "Name"))
+	if exists {
+		fmt.Println("Exists works with hashes")
+	}
+
 	defer client.Close()
 }
 
