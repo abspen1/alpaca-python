@@ -22,7 +22,7 @@ Alpaca is an awesome trading platform for algorithmic trading. They have outstan
 * Very useful if you are wanting to build your own algorithm within Alpaca
 * There are many other functions that could be added to this script by reading the Alpaca Docs
 
-### main
+### alpaca
 * This is the original script that now just has leftover scraps that I didn't pull into a seperate script yet
 * Still has some interesting things within but does need a clean-up
 * Something specific that is cool in here is how to work with the Clock and whether the market is open/closed
