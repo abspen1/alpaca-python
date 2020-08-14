@@ -102,6 +102,8 @@ func main() {
 	if exist == "" {
 		fmt.Println(fmt.Sprintf("HGET works with %s  hashes", language))
 	}
+	exist, _ = redis.String(client.Do("HGET", "emails", "rgulden7@gmail.com"))
+	fmt.Println("Email: ", exist)
 
 	defer client.Close()
 }
