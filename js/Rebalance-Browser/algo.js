@@ -1,4 +1,4 @@
-class FalconOne {
+class algo {
     constructor(API_KEY, API_SECRET) {
         this.alpaca = new AlpacaCORS({
           keyId: API_KEY,
@@ -72,7 +72,7 @@ class FalconOne {
         writeToEventLog(`\nShort Market Value: ${account.short_market_value}\n`);
         writeToEventLog(`Account Cash: ${account.cash}`);
         writeToEventLog(`Portfolio's current value: ${account.portfolio_value}`);
-        writeToEventLog("Finished running Falcon One\n");
+        writeToEventLog("Finished running algo\n");
     } // Finished run
 
     // Get the quantity of holdings in specific stock
@@ -230,13 +230,14 @@ class FalconOne {
         });
         });
     }
-}
+} // End of algo
 
-// Run the Falcon One class.
+
+// Run the algo class.
 function runScript() {
   var API_KEY = $("#api-key").val();
   var API_SECRET = $("#api-secret").val();
-  var F1 = new FalconOne(API_KEY, API_SECRET);
+  var F1 = new algo(API_KEY, API_SECRET);
   F1.run();
 }
 function killScript() {
