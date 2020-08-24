@@ -66,57 +66,6 @@ $ docker pull 10.10.10.1:5000/algo-name \
 $ docker build --no-cache -t 10.10.10.1:5000/algo-name .
 $ docker push 10.10.10.1:5000/algo-name
 ```
-## 📁 js
-### Falcon-Browser
-* First need to download the folder from my github.. 
-* Run the HTML file within a browser, I use Chrome. 
-* Plug in your Alpaca Key ID and your Alpaca Secret Key ID
-* Click on run and it will instantly run Falcon One Algorithm within your account
-    * Must be a paper account unless you tweak some code.
-* The script will output some logs as well as your positions open and the orders placed
-
-### algo.js
-* This is a simple algorithm that incorporates daily rebalancing to limit volatility and increase returns 
-    * Set up so you can edit your holdings and weights however you like
-* Environment Variable Setup
-    * Create a .env file with your api credentials
-        * APCA_API_KEY_ID=apiKey
-        * APCA_API_SECRET_KEY=secretKey
-        * APCA_API_BASE_URL=https://paper-api.alpaca.markets
-    * Create a package.json file
-        * 'npm init -y' in your terminal will do this for you, be sure to cd to the same directory as your .env file
-    * Install the dotenv npm package
-        * npm install dotenv
-
-## 📁 go
-### algo.go
-* This is a simple algorithm that incorporates daily rebalancing to limit volatility and increase returns 
-    * Set up so you can edit your holdings and weights however you like
-* Environment Variable Setup
-    * There are several ways to set and get environment variables with Go
-    * I chose to use the GoDotEnv Package
-        1. Install the GoDotEnv Package - $ go get github.com/joho/godotenv
-        2. Create the .env file within the same directory as your algorithm
-* Download Alpaca Packages
-    * $ go get github.com/alpacahq/alpaca-trade-api-go/common
-    * $ go get github.com/alpacahq/alpaca-trade-api-go/polygon
-    * $ go get github.com/alpacahq/alpaca-trade-api-go/stream
-    * $ go get github.com/alpacahq/alpaca-trade-api-go/alpaca
-* Download Decimal Package
-    * $ go get github.com/shopspring/decimal
-
-### Go 📁
-**redigo**
-* [Install Directions](https://github.com/gomodule/redigo#installation)
-* [Go Connection Examples](https://docs.objectrocket.com/redis_go_examples.html)
-**go-redis**
-* [Install Directions](https://github.com/go-redis/redis#installation)
-* [GoDocs](https://pkg.go.dev/github.com/go-redis/redis/v8?tab=doc#pkg-examples)
-
-### JavaScript
-**ioredis**
-* [Install Directions](https://github.com/luin/ioredis#install)
-* [Other Examples](https://github.com/luin/ioredis/tree/master/examples)
 
 ### Python
 **redis**
@@ -164,13 +113,3 @@ docker pull 10.10.10.1:5000/algo-name \
 $ docker build --no-cache -t 10.10.10.1:5000/algo-name .
 $ docker push 10.10.10.1:5000/algo-name
 ```
-
-## Some to-do's with my scripts here
-**Migrate to other languages**
-* Figure out how to run the JavaScript and Go algorithms in docker 24/7
-* Clean up the code
-* Write a more complex trading algorithm
-**go**
-* Try to get a web browser trader with the Go program as backend
-**python**
-* Try to get a web browser trader with Python as backend
