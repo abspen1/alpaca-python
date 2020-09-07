@@ -26,11 +26,18 @@ def getVarianceMass(nums):
     print(mean)
     return mean
 
+def forLoop(n):
+    i = 1
+    while(i < n):
+        print(f"value of  i: {i}\n")
+        i *= 2
+
 def main():
     nums = [0.1371,	0.2920,	0.1398,	0.0730,
             0.02929, 0.0730, 0.08959, 0.01993, 0.1460]
     # getVariance(nums)
-    getMean([0,1,2,3,4])
+    # getMean([0,1,2,3,4])
     # getVarianceMass([0, 1, 2, 3, 4])
+    forLoop(20)
 if __name__ == "__main__":
     main()
