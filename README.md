@@ -1,4 +1,4 @@
-# Trading-Algorithms
+# Trading-Algorithms [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fabspen1%2Falpaca-python&count_bg=%23808080&title_bg=%23306998&icon=python.svg&icon_color=%23FFD43B&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 
 This is a bunch of code that is me trying to learn the ins and outs of coding in Python. Specifically with API, CSV/TXT files, Redis Database and Pylivetrader. There is a little bit of me trying to migrate these algorithms into other programming languages as well. So far just Golang and JavaScript. The algorithms I have coded so far are simple rebalance algorithms.
 
